@@ -1,0 +1,273 @@
+/* ============================================
+   SREENAND PORTFOLIO — RESPONSIVE STYLES
+   ============================================ */
+
+/* ===== TABLET (max 1024px) ===== */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  .navbar.scrolled {
+    padding: 0.75rem 2rem;
+  }
+
+  .section {
+    padding: 5rem 2rem;
+  }
+
+  .hero {
+    padding: 8rem 2rem 4rem;
+  }
+
+  .hero-content {
+    gap: 3rem;
+  }
+
+  .profile-frame {
+    width: 220px;
+    height: 220px;
+  }
+
+  .ring-1 { width: 240px; height: 240px; top: -10px; left: -10px; }
+  .ring-2 { width: 280px; height: 280px; top: -30px; left: -30px; }
+  .ring-3 { width: 320px; height: 320px; top: -50px; left: -50px; }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* ===== MOBILE LANDSCAPE / SMALL TABLET (max 768px) ===== */
+@media (max-width: 768px) {
+  /* Hide nav links, show hamburger */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(3, 7, 18, 0.98);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 0.5rem;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .hamburger { display: flex; }
+
+  /* Hero - stack vertically */
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+  }
+
+  .hero-text {
+    order: 2;
+  }
+
+  .profile-frame-wrapper {
+    order: 1;
+  }
+
+  .hero-description { margin: 0 auto 2.5rem; }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-socials {
+    justify-content: center;
+  }
+
+  /* Projects filter wrapping */
+  .projects-filter {
+    justify-content: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 4rem 1.5rem;
+  }
+
+  .hero {
+    padding: 7rem 1.5rem 4rem;
+  }
+
+  .footer {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* ===== MOBILE PORTRAIT (max 480px) ===== */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.875rem 1.25rem;
+  }
+
+  .hero-name {
+    font-size: 2.25rem;
+  }
+
+  .profile-frame {
+    width: 180px;
+    height: 180px;
+  }
+
+  .ring-1 { width: 200px; height: 200px; top: -10px; left: -10px; }
+  .ring-2 { width: 230px; height: 230px; top: -25px; left: -25px; }
+  .ring-3 { width: 260px; height: 260px; top: -40px; left: -40px; }
+
+  .hero-title {
+    font-size: 0.95rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+    max-width: 280px;
+  }
+
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .terminal-body {
+    padding: 1rem 1.25rem;
+    font-size: 0.78rem;
+  }
+
+  .contact-card {
+    flex-wrap: wrap;
+  }
+
+  .cc-arrow { display: none; }
+
+  .section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .about-grid {
+    gap: 2rem;
+  }
+
+  .timeline {
+    padding-left: 1rem;
+  }
+
+  .timeline-dot {
+    left: -1.375rem;
+  }
+
+  .projects-grid {
+    gap: 1rem;
+  }
+
+  .project-card {
+    padding: 1.25rem;
+  }
+
+  .tech-badges {
+    gap: 0.5rem;
+  }
+}
+
+/* ===== ULTRA-WIDE (min 1600px) ===== */
+@media (min-width: 1600px) {
+  .section {
+    padding: 7rem 6rem;
+  }
+
+  .hero {
+    padding: 10rem 6rem 6rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .blog-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+  #particleCanvas,
+  .scanlines,
+  .navbar,
+  .scroll-indicator,
+  .back-to-top,
+  .frame-scan,
+  .frame-ring {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .section {
+    padding: 2rem 1rem;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .profile-frame-wrapper {
+    animation: none;
+  }
+
+  .frame-scan {
+    animation: none;
+  }
+
+  .frame-ring {
+    animation: none;
+  }
+}
